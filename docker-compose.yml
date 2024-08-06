@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  web-note:
+    container_name: web-notepad
+    restart: always
+    ports:
+      - 8081:80
+    volumes:
+      - /data/notepad/_tmp:/var/www/html/_tmp
+    image: notepad-web-note:latest

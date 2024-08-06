@@ -11,7 +11,7 @@ header('Cache-Control: no-store');
 if (!isset($_GET['note']) || strlen($_GET['note']) > 64 || !preg_match('/^[a-zA-Z0-9_-]+$/', $_GET['note'])) {
 
     // Generate a name with 5 random unambiguous characters. Redirect to it.
-    header("Location: " . substr(str_shuffle('234579abcdefghjkmnpqrstwxyz'), -5));
+    header("Location: " . substr(str_shuffle('234579abcdefghjkmnpqrstwxyz'), -12));
     die;
 }
 
